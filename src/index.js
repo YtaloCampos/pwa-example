@@ -51,7 +51,7 @@ if (activities.length > 0) {
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker
-	.register('/service-worker.js', {scope: '/pwa-example/'})
+	.register('/pwa-example/service-worker.js', {scope: '/pwa-example/'})
 	.then(function(reg) {
         console.log('Service worker Registered');
     })
