@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chunk TO DO</title>
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="./src/assets/css/reset.css">
+	<link rel="stylesheet" href="./src/assets/css/style.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+	<div>
+		<div class="c-header d-flex justify-content-center">
+			<h4 class="text-primary p-5">Chunk TO DO</h4>
+		</div>
+
+		<div class="container p-5">
+			<form id="c-form" class="d-flex justify-content-center p-2">
+				<div class="d-flex w-100">
+					<input type="text" id="c-title" class="w-100 c-form-control" placeholder="Title">
+					<button type="submit" class="c-btn bg-primary position-absolute r-2 mt-2 btn-sm">
+						<i class="fas fa-plus"></i>
+					</button>
+				</div>
+			</form>
+	
+			<div class="container p-5">
+				<div class="c-sub-header">
+					<h6 class="text-dark text-sm font-bold mb-4">TO DO</h6>
+				</div>
+
+				<div id="c-list"></div>
+				<div class="separator">
+					<i class="fas fa-ellipsis-h"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./src/util/Validator.js"></script>
+	<script src="./src/Activity.js"></script>
+	<script src="./src/index.js"></script>
+</body>
+</html>
