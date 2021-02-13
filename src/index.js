@@ -49,11 +49,11 @@ if (activities.length > 0) {
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker
-	.register('/service-worker.js', {scope: '/'})
-	.then(() => {
-        console.log('Service worker Registered');
-    })
-    .catch(err => {
-        console.log('erro', err);
-    });
+		.register('/pwa-example/service-worker.js', { scope: '/pwa-example/' })
+		.then(() => {
+			console.log('Service worker Registered');
+		})
+		.catch(err => {
+			console.log('erro', err);
+		});
 }
