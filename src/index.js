@@ -16,20 +16,18 @@ function captureRemoveEvents() {
 	for (let i = 0; i < activities.length; i++) {
 		document.getElementById(`c-remove_${i}`).addEventListener('click', () => {
 			activities.splice(i, 1);
-			activity.build(cList, activities);
+			activity.build(cList, activities, treatSession);
 
 			captureRemoveEvents();
-			treatSession();
 		})
 	}
 }
 
 function registerActivity() {
 	activities.unshift(activity.getData(activities));
-	activity.build(cList, activities);
+	activity.build(cList, activities, treatSession);
 
 	captureRemoveEvents();
-	treatSession();
 }
 
 cForm.addEventListener('submit', e => {
@@ -45,17 +43,17 @@ cForm.addEventListener('submit', e => {
 });
 
 if (activities.length > 0) {
-	activity.build(cList, activities);
+	activity.build(cList, activities, treatSession);
 	captureRemoveEvents();
 }
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker
 	.register('/service-worker.js', {scope: '/'})
-	.then(function(reg) {
+	.then(() => {
         console.log('Service worker Registered');
     })
-    .catch(function (err) {
+    .catch(err => {
         console.log('erro', err);
     });
 }
