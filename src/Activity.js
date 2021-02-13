@@ -23,15 +23,16 @@ class Activity {
 			'text-dark',
 			'text-sm',
 			'text-bold',
-			'align-items-center'
+			'align-items-center',
+			'mb-3'
 		], btnsStyle = [
 			'c-btn',
-			'btn-xs',
-			'mb-3'
+			'btn-xs'
 		], wrapperStyle = [
 			'd-flex',
 			'align-items-center',
-			'c-pointer'
+			'c-pointer',
+			'w-100'
 		];
 
 		el.innerHTML = '';
@@ -49,6 +50,7 @@ class Activity {
 
 			// activitie title element
 			titleItem.textContent = activities[i].title;
+			titleItem.classList.add('c-title');
 			if (activities[i]['checked']) {
 				titleItem.classList.add('line-through');
 			}
@@ -56,6 +58,7 @@ class Activity {
 			// activitie checkbox element
 			inputItem.type = 'checkbox';
 			inputItem.name = 'c-confirm';
+			inputItem.classList.add('c-confirm');
 			inputItem.checked = !!activities[i]['checked']
 
 			// title & checkbox container 

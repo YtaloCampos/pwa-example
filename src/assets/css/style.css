@@ -139,6 +139,32 @@ body {
 	text-decoration: line-through;
 }
 
+.c-title {
+	line-break: anywhere;
+}
+
 .c-pointer {
 	cursor: pointer;
+}
+
+.c-confirm {
+	position: relative;
+	-webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    padding: 9px;
+	border-radius: 50px;
+	outline: none;
+}
+
+.c-confirm:checked:after {
+	content: ' ';
+	padding: 6px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: var(--text-primary);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
 }
